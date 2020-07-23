@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -90,7 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IDValidator\IDValidator.csproj">
-      <Project>{A4C8366D-6764-4D5B-9527-DE60CB71F9F1}</Project>
+      <Project>{F4EF5DA5-755C-4C78-88A1-1D0A88333BF3}</Project>
       <Name>IDValidator</Name>
     </ProjectReference>
   </ItemGroup>

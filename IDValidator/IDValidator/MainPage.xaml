@@ -4,13 +4,38 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="IDValidator.MainPage">
+             x:Class="IDValidator.MainPage" Padding="30">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout VerticalOptions="Center">
+
+        <Label Text="ID Number Validator"
+               Font="30"
+               WidthRequest="150"
+               HeightRequest="40"
+               HorizontalTextAlignment="Center"/>
+        <Label Text="School: DLSU/CSB"
+               TextColor="White"
+               BackgroundColor="Green"
+               Font="15"
+               WidthRequest="150"
+               HeightRequest="40"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center"/>
+
+         <Entry x:Name="txtIDNumber"
+                Placeholder="Enter ID number here."
+                WidthRequest="200"
+                Keyboard="Numeric"
+                HorizontalTextAlignment="Center"
+                MaxLength="8"/>
+        <Button x:Name="btnValidate"
+                Clicked="btnValidate_Clicked"
+                Text="Validate!"
+                Font="20"
+                WidthRequest="100"
+                HeightRequest="70"/>
+ 
+       
     </StackLayout>
 
 </ContentPage>

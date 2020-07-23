@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 using Xamarin.Forms;
+using IDValidator.Logic;
+using System;
 
 namespace IDValidator
 {
@@ -16,6 +13,35 @@ namespace IDValidator
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        void btnValidate_Clicked(System.Object sender, System.EventArgs e)
+        {
+            try
+            {
+                string idNumber = txtIDNumber.Text.Trim();
+                if (txtIDNumber.Text != "")
+                {
+                    bool isValid = Computations.validateDlsuIdNumber(int.Parse(idNumber));
+                    if (isValid)
+                    {
+                        DisplayAlert("ID Validator", "ID Number " + idNumber + " is VALID.", "Ok");
+                    }
+                    else
+                    {
+                        DisplayAlert("ID Validator", "ID Number " + idNumber + " is INVALID.", "Ok");
+                    }
+                }
+                else
+                {
+                    DisplayAlert("ID Validator", "Please enter an ID number to validate.", "Ok");
+                }
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("ID Validator", "Please check if your input format is correct.", "Ok");
+            }
+            
         }
     }
 }
